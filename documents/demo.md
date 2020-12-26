@@ -1,0 +1,1 @@
+A demo is worth thousands of words. [Here is a sample site](https://functors.net/sample-site). Log in with username *sample* and password *12345678* to have a full view.

@@ -1,0 +1,1 @@
+If you have any suggusetion or need help, just comment below or send an email to [feedback@functors.net](mailto:feedback@functors.net). Your feedback is very appreciated!
