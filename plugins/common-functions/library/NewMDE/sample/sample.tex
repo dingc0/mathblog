@@ -1,0 +1,55 @@
+% !TEX program = pdflatex
+\documentclass{article}
+\usepackage{amssymb,amsmath,amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title{Example}
+\author{Ding, C.}
+\date{}
+\begin{document}
+
+\section{This is a section}
+
+This is an inline equation: $x^2=-1$.
+
+This is a centered equation: $$a^2+b^2=c^2.$$
+
+This is a numbered equation: 
+\begin{equation}
+\lim_{n\to\infty}\frac{1}{n}=0.
+\label{eq:sample}
+\end{equation}
+
+This is an aligned equation:
+\begin{align}
+	\int_{0}^{1}2x\,dx 
+	&=x^2\Big|_{x=0}^1\label{eq:sample2}\\
+	&=1
+\end{align}
+
+	
+This is how to cite the above equation: \eqref{eq:sample} \& \eqref{eq:sample2}.
+
+\begin{theorem} \label{thm:sample}
+	This is a theorem environment.
+\end{theorem}
+
+\begin{corollary}\label{corollary}
+	This is a theorem-like environments.
+\end{corollary}
+
+This is how to cite the above theorem: \ref{thm:sample} \& \ref{corollary}.
+
+\begin{proof}
+	Here goes the proof.
+\end{proof}
+
+This is how to cite references: \cite{mac2013categories}.
+
+\input{input}
+
+\bibliographystyle{plain}
+\bibliography{sample}
+\end{document}

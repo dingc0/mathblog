@@ -185,7 +185,7 @@ settings dialog
                         $('input[name="task"]').val('publish');
                         if (action=='publish' && $("input[name='id']").val()==0){
                             var dialogContent=selectCategoriesForm();
-                            var categorizeDialog=$('<div/>',{html:dialogContent,});
+                            var categorizeDialog=$('<div/>',{id:'dialog-select-categories',html:dialogContent,});
                             categorizeDialog.dialog({title:'Select Categories',
                                 buttons:{
                                     Done:function(){
@@ -193,8 +193,8 @@ settings dialog
                                         var categoryIDs = jQuery(categorySelector + ' input[type="checkbox"]:checked').map(function () {
                                             return jQuery(this).getItemID();
                                         });//https://stackoverflow.com/questions/21307137/using-jquery-to-get-data-attribute-values-with-each
-                                        //alert(categoryIDs.get())
                                         categoryIDs=categoryIDs.get();
+                                        //alert(categoryIDs);
                                         $('#edit-form input[name="category-ids"]').val(categoryIDs);
                                         form.submit();
                                         $(this).remove();
@@ -213,7 +213,7 @@ settings dialog
 
         form.off("submit").on("submit",function(){
             $('textarea[name="content"]').val(simplemde.value());
-            console.log(simplemde.citations());
+            //console.log(simplemde.citations());
             $('input[name="citations"]').val(simplemde.citations());
             loading.show();
             $.ajax({

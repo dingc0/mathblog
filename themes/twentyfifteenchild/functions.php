@@ -26,17 +26,25 @@ function child_theme_enqueue_scripts(){
     wp_register_script('print',$library_url.'print/print.js',array('jquery','site-wide'),$version,true);
     wp_register_script('comment-list',$library_url.'comment-list/comment-list.js',array('jquery','site-wide'),$version,true);
     if(is_user_logged_in()){
-        //wp_enqueue_script('notifications');
+        wp_enqueue_script('notifications');
     }
     if(current_user_can('publish_posts')){
         wp_enqueue_script('categorize');
     }
     wp_enqueue_script('info');
     wp_enqueue_script('print');
-    if(is_single()) {
-       wp_enqueue_script('comment-list');
-    }
 }
+
+/*
+ * login url
+ */
+function sign_in_url_filter($login_url, $redirect, $force_reauth ) {
+    switch_to_blog(get_main_site_id());
+    $login_url=network_site_url('wp-login.php?redirect_to='.$redirect);
+    restore_current_blog();
+    return $login_url;
+}
+add_filter('login_url','sign_in_url_filter',10,3);
 
 /*
  * manage categories
@@ -242,35 +250,7 @@ echo "</div>";
         menu_item('Edit', 'fa fa-edit', 'edit', get_insert_post_link(get_the_ID()));
     }
 }
-function menu_item($text,$icon,$class='',$link='#'){
-    //echo "<a class='$class action' href='$link'>".get_icon($icon)." $text</a>";
-    echo "<span class='$class menu-item'> <a href='$link'>".get_icon($icon)." $text</a></span>";
-}
-function comment_menus(){
-    //reply vote download delete
-    $comment=get_comment();
-    $comment_id=$comment->comment_ID;
-    $comment_author_email=$comment->comment_author_email;
-    $comment_aurhor_username='';
-    if($comment_author=get_user_by('email',$comment_author_email)){
-        $comment_author_id=$comment_author->ID;
-        $comment_aurhor_username=$comment_author->user_login;
-        if(!$comment_aurhor_username){
-            $comment_aurhor_username=get_comment_author();
-        }
-    }
-    echo "<div class='comment-menus hidden'>";
-    menu_item('Reply','fa fa-reply',"respond respond-to-$comment_aurhor_username","#respond");
-    //menu_item('Vote','fa fa-thumbs-up','vote');
-    if(is_user_logged_in()) {
-        if (current_user_can('edit_posts')||(get_current_user_id()==$comment_author_id) ) {
-            menu_item('Latex', 'fa fa-download', 'download');
-            menu_item('Delete', 'fa  fa-trash', 'edit');
-        }
-    }
-    echo "</div>";
 
-}
 
 /*
  * site info

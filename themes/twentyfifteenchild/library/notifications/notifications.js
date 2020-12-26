@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
-    var CurrentUserAdminAjaxURL=$('#current-user-admin-ajax-url').attr("href");
+    //var CurrentUserAdminAjaxURL=$('#current-user-admin-ajax-url').attr("href");
+    var CurrentUserAdminAjaxURL=ajaxurl;
+    //alert(ajaxurl);
     var pullNotification=function(){
         $.ajax({
             url: CurrentUserAdminAjaxURL,
@@ -20,5 +22,5 @@ jQuery(document).ready(function($) {
         });
     }
 //setTimeout(pullNotification,3000);
-setInterval(pullNotification,30000);
+setInterval(pullNotification,3000);
 });

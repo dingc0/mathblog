@@ -5,7 +5,7 @@
 
 $post_id=$_GET['id'];
 get_header(); ?>
-
+<div class="wrap">
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         <?php
@@ -28,6 +28,7 @@ get_header(); ?>
         </article><!-- #post-<?php the_ID(); ?> -->
     </main><!-- .site-main -->
 </div><!-- .content-area -->
+</div>
 
 <?php get_footer(); ?>
 <script>
