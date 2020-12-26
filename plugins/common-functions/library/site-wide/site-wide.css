@@ -1,0 +1,92 @@
+/*
+frequently used
+ */
+.hidden{display:none;}
+.page-title{
+    display:flex;
+    justify-content: space-between;
+}
+
+/*
+icon
+ */
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+i.fa,i.fas{
+    color:grey;
+}
+/*
+input type="file"
+*/
+input[type="file"]{width:100%;border:1px solid #bbb}
+/*
+buttons
+ */
+button:not(:first-of-type){
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    font-weight:normal;
+}
+.buttons{
+    display:flex;
+    justify-content: flex-end;
+}
+.buttons button{
+    margin-left: 0.5em;
+}
+
+/*
+editor
+ */
+.editor-toolbar a{box-shadow:none!important;}
+.entry-content .editor-toolbar a{border:none;}
+
+/*
+privacy
+*/
+.cli_settings_button{display:none!important;}
+.cli_action_button{background-color: #333!important;}
+
+
+/*
+entry-footer comment-menus
+ */
+.entry-footer span,.comment-menus span{
+    display:inline-block;
+    padding: 0 0.5em;
+}
+.entry-footer:first-child,comment-menus:first-child{
+    padding-left:0;
+}
+.entry-footer:last-child,comment-menus:last-child{
+    padding-right: 0;
+}
+.entry-footer span a,.comment-menus span a{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+.entry-meta > span, .comment-menus > span{
+    display:inline-block;
+    padding:0.5em;
+}
+.entry-meta span:before{
+    content:none;
+}
+.comment-menus{margin-top:1em;}
+.comment-menus span a{
+    font-size: smaller;
+    color:grey;
+}
+.edit-link{
+	display:none;
+}
+
+:root{
+	--wp-admin-theme-color:green;
+	--wp-admin-theme-color-darker-10:green;
+}

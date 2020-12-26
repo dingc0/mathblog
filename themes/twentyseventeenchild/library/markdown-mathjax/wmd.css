@@ -1,0 +1,205 @@
+
+.wmd-panel
+{
+	margin-left: 0%;
+	margin-right: 0%;
+	width: 100%;
+/*	min-width: 400px; */
+}
+.wmd-button-row a{
+	box-shadow:none;
+}
+.wmd-button-bar 
+{
+	width: 100%;
+
+}
+
+.wmd-input 
+{ 
+
+	height:20em;
+	font-family: Consolas,Monaco,monospace;
+    font-size: 13px;
+    padding: 10px;
+    margin: 1px 0 0;
+    line-height: 150%;
+    display: block;
+    resize: vertical;
+	
+}
+
+.wmd-preview 
+{ 	margin:5px 0 5px;
+	width:100%;border-top: 1px #ccc dashed;border-bottom: 1px #ccc dashed;
+}
+
+.wmd-button-row 
+{
+	/*position: relative; */
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px!important;
+	margin-top: 10px;
+	padding: 0px;  
+	height: 20px;
+}
+
+
+.wmd-button > span {
+    /*background-image: url(../../wmd-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;*/
+}
+
+
+
+
+
+.wmd-button-row>li{padding:0 0.25em;}
+.wmd-button-row>li:last-child{ float:right; padding-right:0;margin-right:0}
+.wmd-button-row>li:first-child{padding-left:0;margin-left:0}
+.wmd-button-row>.wmd-spacer{padding:0 0px;margin: 0 0.5em;}
+
+.wmd-spacer
+{
+	
+	width: 1px; 
+	height: 1em; 
+	
+	
+	/*position: absolute;*/
+	background-color: Silver;
+	display: inline-block; 
+	list-style: none;
+	
+}
+
+.wmd-button {
+   /* width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: absolute;*/
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+/*
+.wmd-spacer1
+{
+    left: 50px;
+}
+.wmd-spacer2
+{
+    left: 175px;
+}
+.wmd-spacer3
+{
+    left: 300px;
+}
+*/
+
+.wmd-prompt-background
+{
+	/*background-color: Black;*/
+}
+
+.wmd-prompt-dialog:not(.DialogContent)
+{
+	/*border: 1px solid #999999;
+	background-color: #F5F5F5;
+	width:65%!important;*/
+	border: 1px solid #ccc;
+
+	padding:2em 4em 1.5em;
+	box-shadow:-0px 0px 5px #ccc;
+	background-color:white;
+	width:auto!important;
+	margin-top: 0!important;
+	margin-left: 0!important;
+
+	max-height:80%;
+	background-color:white;
+	left: 50%; top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	position: fixed;
+	z-index: 1001;
+	padding: 4% 5%;
+
+}
+
+.wmd-prompt-dialog > div {
+	width:100%;
+	/*font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;*/
+}
+
+
+.wmd-prompt-dialog > form > input[type="text"] {
+	width:100%!important;
+	border:1px solid #ccc;
+	margin:0!important;
+	/*border: 1px solid #999999;
+	color: black;*/
+}
+
+.wmd-prompt-dialog > form > input[type="button"]{
+	
+	/*border: 1px solid #888888;
+	font-family: trebuchet MS, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;*/
+}
+
+/*
+insert image dialog
+ */
+/*do not use  *float* */
+.InsertImageTab{
+	margin:0;
+	padding-bottom: 0!important;
+	border-bottom: lightgrey 1px solid;
+}
+.InsertImageTab > li{
+	padding: 0.5em 1em;
+	display: inline-block;
+	list-style: none;
+}
+.InsertImageTab > li:first-child{
+	padding-left:0;
+}
+
+.ImageURLTab,.ImageFileTab{
+	font-weight:normal;
+	cursor:pointer;
+}
+.CurrentTab{
+	margin-bottom:-1px!important;
+	border: lightgrey 1px solid;
+	border-bottom-color:white;
+}
+
+.wmd-prompt-background{background-color:black;}
+
+@media screen and (max-width: 400px){
+	.wmd-button-row>li:nth-child(6) { display: none; }
+	.wmd-button-row>li:nth-child(12) { display: none; }
+	.wmd-button-row>li:nth-child(13) { display: none; }
+	.wmd-button-row>li:nth-child(14) { display: none; }
+	.wmd-button-row>li:nth-child(15) { display: none; }
+}
+@media screen and (max-width: 954px) {
+	.wmd-prompt-dialog:not(.DialogContent) {
+
+		width: 85% !important;
+		padding-left: 2.5% !important;
+		padding-right: 2.5% !important;
+
+	}
+}

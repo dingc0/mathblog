@@ -13,16 +13,15 @@ function my_theme_enqueue_styles() {
     );
 }
 
-add_action( 'wp_enqueue_scripts', 'sign_scripts' );
-function sign_scripts(){
+add_action( 'wp_enqueue_scripts', 'main_site_scripts' );
+function main_site_scripts(){
     $version=wp_get_theme()->get('Version');
     $library_url=get_stylesheet_directory_uri() . '/library/';
     wp_register_script('sign',$library_url . 'sign/sign.js',array(),$version,true);
     wp_enqueue_script('my_functions');
     if($GLOBALS['pagenow'] == 'wp-signup.php'||$GLOBALS['pagenow'] == 'wp-activate.php'){
         wp_enqueue_script('sign');
-        //blog_register_form();
-    }
+    }	
 }
 
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
@@ -56,7 +55,7 @@ function initialize_new_blog( $blog_id,$user_id ) {
     get_userdata($user_id)->set_role('editor');
 
     $site_url=get_site_url();
-    $cdn_url=preg_replace('/(functors\.net)/','cdn\.$1',$site_url);
+    $cdn_url=preg_replace('/(functors\.net)/','cdn.$1',$site_url);
     update_option('ossdl_off_cdn_url',$cdn_url);//wp super cache option
     rewrite_flush();
     restore_current_blog();

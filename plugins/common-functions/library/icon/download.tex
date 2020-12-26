@@ -1,0 +1,132 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\author{}
+\date{}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{this-is-a-section}{%
+\section{This is a section}\label{this-is-a-section}}
+
+This is an inline equation: \(x^2=-1\).
+
+This is a centered equation: \[a^2+b^2=c^2.\]
+
+This is a numbered equation: \begin{equation}
+\lim_{n\to\infty}\frac{1}{n}=0.
+\label{eq:sample}
+\end{equation}
+
+This is an aligned equation: \begin{align}
+    \int_{0}^{1}2x\,dx 
+    &=x^2\Big|_{x=0}^1\label{eq:sample2}\\
+    &=1
+\end{align}
+
+This is how to cite the above equation: \(\eqref{eq:sample}\) \&
+\(\eqref{eq:sample2}\).
+
+\leavevmode\hypertarget{thm:sample}{}%
+\textbf{Theorem 1}. \emph{This is a theorem environment.}
+
+\leavevmode\hypertarget{corollary}{}%
+\textbf{Corollary 2}. \emph{This is a theorem-like environments.}
+
+This is how to cite the above theorem:
+\protect\hyperlink{thm:sample}{Theorem~1} \&
+\protect\hyperlink{corollary}{Corollary~2}.
+
+\emph{Proof.} Here goes the proof.~◻
+
+This is how to cite references: (Mac Lane, n.d.).
+
+\hypertarget{this-is-another-section}{%
+\section{This is another section}\label{this-is-another-section}}
+
+This is an input file.
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-mac2013categories}{}%
+Mac Lane, Saunders. n.d. \emph{{Categories for the working
+mathematician}}. Vol. 5. Springer Science \& Business Media.
+
+\leavevmode\hypertarget{ref-mac2013categories}{}%
+---------. n.d. \emph{{Categories for the working mathematician}}. Vol.
+5. Springer Science \& Business Media.
+
+\end{CSLReferences}
+
+\end{document}

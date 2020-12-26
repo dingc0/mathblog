@@ -15,6 +15,8 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
+	<a href="https://functors.net/acknowledgment">Acknowledgment</a>
+	<span role="separator" aria-hidden="true"></span>
 	<a href="<?php echo esc_url( __( 'https://functors.net/', 'twentyseventeen' ) ); ?>" class="imprint">
 		<?php
 			/* translators: %s: WordPress */
