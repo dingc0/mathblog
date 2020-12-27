@@ -1,7 +1,7 @@
 This is the themes and plugins for the web platform *Functors.net*
 
-Homepage: [https://functors.net](https://functors.net)
-Sample site: [https://functors.net/sample-site](https://functors.net/sample-site).
+- Homepage: [https://functors.net](https://functors.net)
+- Sample site: [https://functors.net/sample-site](https://functors.net/sample-site).
 
 The project is based on
 
