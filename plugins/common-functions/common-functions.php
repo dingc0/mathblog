@@ -166,7 +166,7 @@ function common_scripts(){
     wp_register_style('ui-dialog',$library_url.'dialog/ui-dialog.css',array('dialog'),$version);
     wp_register_script('dialog',$library_url.'dialog/dialog.js',array('jquery','site-wide','jquery-ui-dialog','jquery-ui-progressbar'),$version,true);
     wp_register_script('mathjax-config',$library_url.'mathjax/mathjax-config.js',array(),$version,false);
-    wp_register_script('MathJax', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js',array('mathjax-config'),$version,false);
+    wp_register_script('MathJax', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js',array('mathjax-config'),$version,true);
     wp_register_script('mathjax-typeset',$library_url.'mathjax/mathjax-typeset.js',array('MathJax','jquery'),$version,true);
     wp_register_style('SimpleMDE',"https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css",array('dialog'),$version);
     wp_register_script('SimpleMDE',"https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js",array(),$version,true);
@@ -217,7 +217,7 @@ function common_scripts(){
 /*
  * load mathjax
  */
-add_action('wp_head','mathjax');
+/*add_action('wp_head','mathjax');
 function mathjax(){
     ?>
     <script>
@@ -248,6 +248,8 @@ typeset:false,
     </script>
     <?php
 }
+*/
+
 /*
  * conversion
  */

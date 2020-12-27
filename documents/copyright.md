@@ -1,3 +1,5 @@
+This is the themes and plugins for the site [Functors.net](https://functors.net).
+
 The project is based on
 
 - [WordPress](https://wordpress.org)
@@ -10,4 +12,4 @@ The project is based on
 - [mathjaxEditing.js](https://math.stackexchange.com)
 - [Citation.js](https://citation.js.org/)
 - [Buddypress](https://buddypress.org/)
-- [WSL](http://miled.github.io/wordpress-social-login/)
+- [WSL Plugin](http://miled.github.io/wordpress-social-login/)

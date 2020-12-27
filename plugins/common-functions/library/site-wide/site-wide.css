@@ -85,8 +85,3 @@ entry-footer comment-menus
 .edit-link{
 	display:none;
 }
-
-:root{
-	--wp-admin-theme-color:green;
-	--wp-admin-theme-color-darker-10:green;
-}
