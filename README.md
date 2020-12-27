@@ -1,4 +1,4 @@
-This is the themes and plugins for the web platform *Functors.net*
+Themes and plugins for the web platform *Functors.net*
 
 - Homepage: [https://functors.net](https://functors.net)
 - Sample site: [https://functors.net/sample-site](https://functors.net/sample-site).
