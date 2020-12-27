@@ -6,7 +6,7 @@ I'm a second-year PhD student in Mathematics. During the Covid-19, I wrote some 
 - WordPress.com. A good blog community. But it has minor optimiztions for mathematicians, what if we want to write some academic post? Use a conversion tool? Why not write and update directly!
 - Overleaf. A great online editor. It is not designed for blogs, what if we want to update our recent status like latest lecture notes?
 
-So, I created this web platform - **a blog community for mathematicians**.  Here, we are free to do all of the above. Hope it can be helpful to our communication, especially in this strange time.
+So, I created this web platform - **a blog community for mathematicians**. (The word "mathematician" is in its broad sense, means people studying math at any level and professionals in related fields.)  Here, we are free to do all of the above. Hope it can be helpful to our communication, especially in this strange time.
 
 The open source can be found [here](https://github.com/dingc0/mathblog). Feel free to use it and you are encouraged to join me to do this project together.
 

@@ -3,6 +3,9 @@ Themes and plugins for the web platform *Functors.net*
 - Homepage: [https://functors.net](https://functors.net)
 - Sample site: [https://functors.net/sample-site](https://functors.net/sample-site).
 
+Todo
+- allow users to vote comments.
+
 The project is based on
 
 - [WordPress](https://wordpress.org)
